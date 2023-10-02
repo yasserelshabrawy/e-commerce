@@ -9,13 +9,13 @@ export default function Adress() {
       token: localStorage.getItem("userToken"),
     };
     
-  function checkOut(id,value){
-      return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=http://localhost:3000` , {shippingAddress:value} , {
+  function checkOut(id,value,url){
+      return axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=${url}` , {shippingAddress:value} , {
           headers:header
       })
     }
   async function hello(value) {
-   let res = await checkOut(cartId, value)
+   let res = await checkOut(cartId, value,window.location.href.split("/").slice(0,3).join("/"))
    console.log(res.data);
     if(res.data.status === 'success'){
       window.location.href= res.data.session.url
@@ -33,7 +33,7 @@ export default function Adress() {
 
   return (
     <>
-      <div className="container w-50 mx-auto mt-4">
+      <div className="container w-50 mx-auto mt-4 py-5">
         <form onSubmit={formik.handleSubmit}>
           <label htmlFor="details">details :</label>
           <input

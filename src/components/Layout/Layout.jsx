@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom'
 import { UserContext } from '../Context/Context'
 import { Offline, Online } from "react-detect-offline";
 import  { Toaster } from 'react-hot-toast';
+import Footer from '../Footer/Footer';
 
 export default function Layout() {
   let {setUserToken} = useContext(UserContext)
@@ -14,10 +15,13 @@ export default function Layout() {
     }
   },[])
   return (<>
-    <Navbar/>
+ <div className='d-grid vh-100'>
+ <Navbar/>
     <Outlet/>
     <Offline>Site is offline</Offline>
     <Toaster></Toaster>
+    <Footer></Footer>
+ </div>
     
   </>
   )
