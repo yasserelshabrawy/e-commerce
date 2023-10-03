@@ -17,7 +17,10 @@ export default function Layout() {
   return (<>
  <div className='d-grid vh-100'>
  <Navbar/>
-    <Outlet/>
+ <div className='my-5'>
+
+    <Outlet></Outlet>
+ </div>
     <Offline>Site is offline</Offline>
     <Toaster></Toaster>
     <Footer></Footer>

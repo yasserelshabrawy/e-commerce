@@ -108,7 +108,7 @@ export default function DisplayProduct() {
                 <div key={product.id} className='col-md-2'>
                   <div className='product p-2 position-relative'>
                     {showHeart[index] ? (
-                      <button onClick={() => getRemoveFav(product.id, index)} className='favorite bg-danger text-white position-absolute start-0 btn'>
+                      <button onClick={() => getRemoveFav(product.id, index)} className='favorite bg-danger text-white position-absolute end-0 btn'>
                         <i className='fas fa-heart-broken'></i>
                       </button>
                     ) : (

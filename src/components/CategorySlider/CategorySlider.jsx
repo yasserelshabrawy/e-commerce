@@ -17,13 +17,16 @@ export default function CategorySlider() {
   };
   return (
     <div className="container">
-      <div className="row py-3">
+          <div className="row py-3">
         <Slider {...settings}>
           {data?.data.data.map((category) => (
-            <img key={category._id} height={200} src={category.image} />
-          ))}
+            
+              <img key={category._id} height={200} src={category.image} />
+
+            
+              ))}
         </Slider>
-      </div>
+              </div>
     </div>
   );
 }
