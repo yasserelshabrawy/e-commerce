@@ -16,7 +16,7 @@ export default function MainSlider() {
         slidesToScroll: 1
       };
   return (
-    <div className="container">
+    <div className="container MainSlider">
         <div className="row gx-0 py-2">
             <div className="col-md-9">
             <Slider {...settings}>

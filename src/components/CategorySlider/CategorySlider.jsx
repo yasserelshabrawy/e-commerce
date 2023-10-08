@@ -16,7 +16,7 @@ export default function CategorySlider() {
     slidesToScroll: 1,
   };
   return (
-    <div className="container">
+    <div className="container CategorySlider">
           <div className="row py-3">
         <Slider {...settings}>
           {data?.data.data.map((category) => (

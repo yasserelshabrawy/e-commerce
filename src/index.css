@@ -69,7 +69,7 @@ a:hover{
   }
 @media (min-width: 768px) {
     /* Apply display: none to hide MainSlider and CategorySlider */
-   .productSLider {
+   .productSlider {
       display: none;
     }
   }
