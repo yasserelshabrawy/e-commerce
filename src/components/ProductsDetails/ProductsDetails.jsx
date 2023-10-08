@@ -40,8 +40,11 @@ export default function ProductsDetails() {
     <div className="container">
         <div className="row align-items-center">
             <div className="col-md-4">
-            <Slider {...settings}>
+            <Slider {...settings} className='MainSlider'>
         {data?.data.data.images.map((img)=> <img key={data?.data.data.id} className='w-100' src={img} alt={data?.data.data.title} />)}
+            </Slider>
+            <Slider {...settings} className='productSlider'>
+         <img  className='w-100' src={data?.data.data.imageCover} alt={data?.data.data.title} />
             </Slider>
             </div>
             <Helmet>
